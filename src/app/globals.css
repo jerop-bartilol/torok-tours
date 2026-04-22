@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-safari-brown: #6B3F1D;
+  --color-safari-gold: #C89B3C;
+  --color-safari-accent: #8B4A1F;
+  --color-safari-text: #3E2A1F;
+  --color-safari-dark: #4A3426;
+  --color-safari-logo: #5A3E2B;
+  --color-safari-cream: #F5E9D8;
+  --color-safari-cream-light: #FAF6EF;
+  --color-safari-widget: #F8F1E7;
+  --color-safari-cream-end: #EAD7B7;
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-safari-text);
+  background: var(--color-safari-cream-light);
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.8s ease-out 0.2s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.8s ease-out 0.4s both;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out 0.6s both;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
